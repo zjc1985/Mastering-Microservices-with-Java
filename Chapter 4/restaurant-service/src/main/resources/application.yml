@@ -13,9 +13,15 @@ error:
 
 # Discovery Server Access
 eureka:
+  instance:
+    perferIpAddress: true
   client:
+    registryFetchIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 5
+    initialInstanceInfoReplicationIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+       defaultZone: http://localhost:8761/eureka/
+    fetchRegistry: true
 
 # HTTP Server
 server:
